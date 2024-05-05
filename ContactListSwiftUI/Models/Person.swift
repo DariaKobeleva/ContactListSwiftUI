@@ -50,4 +50,15 @@ struct Person: Identifiable {
         }
         return contactsList
     }
+    
+    static func getRandomPerson() -> Person {
+        let dataStore = DataStore.shared
+        let person = Person(
+            name: dataStore.names.randomElement() ?? "",
+            surname: dataStore.surnames.randomElement() ?? "",
+            phoneNumber: dataStore.phoneNumbers.randomElement() ?? "",
+            email: dataStore.emails.randomElement() ?? ""
+        )
+        return person
+    }
 }

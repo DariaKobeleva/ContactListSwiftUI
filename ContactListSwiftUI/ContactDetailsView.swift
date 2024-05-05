@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContactDetailsView: View {
-    let person: Person
+    @Environment(\.dismiss) private var dismiss
+    let contact: Person
     
     var body: some View {
         List {
@@ -19,20 +20,29 @@ struct ContactDetailsView: View {
                     .frame(width: 120, height: 120)
                 Spacer()
             }
-            HStack{
-                Image(systemName: "phone")
-                Text("\(person.phoneNumber)")
-            }
-            HStack{
-                Image(systemName: "tray")
-                Text("\(person.email)")
-            }
-                .navigationBarTitle("\(person.fullName)")
-        
+            //Не понимаю, почему под изображениями нет разделительной линии (
+            Label("\(contact.phoneNumber)", systemImage: "phone")
+            Label("\(contact.email)", systemImage: "tray")
         }
+        .navigationBarTitle("\(contact.fullName)")
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    dismiss()
+                }) {
+                    //Пробовала сделать через label, но в таком случае не отображается текст
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                        Text("Back")
+                    }
+                }
+            }
+        }
+        
     }
 }
 
 #Preview {
-    ContactDetailsView(person: Person(name: "Lola", surname: "Polyakova", phoneNumber: "123-456-7890", email: "tiger123@example.com"))
+    ContactDetailsView(contact: Person.getRandomPerson())
 }

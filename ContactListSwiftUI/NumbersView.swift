@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct NumbersView: View {
+    let contactsList: [Person]
+    
     var body: some View {
-        Text("Numbers View")
+        NavigationStack {
+            List(contactsList) { person in
+                Section(header: Text("\(person.fullName)")
+                    .font(.headline)
+                ){
+                    Label("\(person.phoneNumber)", systemImage: "phone")
+                    Label("\(person.email)", systemImage: "tray")
+                }
+            }
+            .listStyle(.plain)
+            .navigationBarTitle("Contacts List")
+        }
     }
 }
 
 #Preview {
-    NumbersView()
+    NumbersView(contactsList: Person.getContactList())
 }
+

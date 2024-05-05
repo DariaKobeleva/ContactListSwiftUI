@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct PersonRowView: View {
-    let person: Person
+    let contact: Person
     
     var body: some View {
-        NavigationLink(destination: ContactDetailsView(person: person)){
+        NavigationLink(destination: ContactDetailsView(contact: contact)){
             HStack {
-                Text("\(person.fullName)")
+                Text("\(contact.fullName)")
                     .foregroundColor(.black)
-                    .frame(alignment: .leading)
-                Spacer()
             }
         }
     }
 }
 
 #Preview {
-    PersonRowView(person: Person(name: "Olya", surname: "Pokrov", phoneNumber: "0000", email: "111@mail.ru"))
+    PersonRowView(contact: Person.getRandomPerson())
 }

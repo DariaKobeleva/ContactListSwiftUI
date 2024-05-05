@@ -73,10 +73,10 @@
 			children = (
 				20C04FB22BE5168200709032 /* ContactListSwiftUIApp.swift */,
 				20C04FB42BE5168200709032 /* ContentView.swift */,
-				20BF4A252BE518FA00F772A6 /* PersonRowView.swift */,
-				20BF4A2B2BE5290700F772A6 /* ContactDetailsView.swift */,
 				20BF4A272BE51A9500F772A6 /* ContactsView.swift */,
+				20BF4A2B2BE5290700F772A6 /* ContactDetailsView.swift */,
 				20BF4A292BE51FC800F772A6 /* NumbersView.swift */,
+				20BF4A252BE518FA00F772A6 /* PersonRowView.swift */,
 				20BF4A242BE5188400F772A6 /* Services */,
 				20C04FC42BE5175600709032 /* Models */,
 				20C04FB62BE5168300709032 /* Assets.xcassets */,
