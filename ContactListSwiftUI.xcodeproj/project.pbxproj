@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20BF4A262BE518FA00F772A6 /* PersonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF4A252BE518FA00F772A6 /* PersonRowView.swift */; };
+		20BF4A282BE51A9500F772A6 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF4A272BE51A9500F772A6 /* ContactsView.swift */; };
+		20BF4A2A2BE51FC800F772A6 /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF4A292BE51FC800F772A6 /* NumbersView.swift */; };
+		20BF4A2C2BE5290700F772A6 /* ContactDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF4A2B2BE5290700F772A6 /* ContactDetailsView.swift */; };
 		20C04FB32BE5168200709032 /* ContactListSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04FB22BE5168200709032 /* ContactListSwiftUIApp.swift */; };
 		20C04FB52BE5168200709032 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04FB42BE5168200709032 /* ContentView.swift */; };
 		20C04FB72BE5168300709032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C04FB62BE5168300709032 /* Assets.xcassets */; };
 		20C04FBA2BE5168300709032 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C04FB92BE5168300709032 /* Preview Assets.xcassets */; };
+		20C04FC12BE516A400709032 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04FC02BE516A400709032 /* DataStore.swift */; };
+		20C04FC32BE5171B00709032 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04FC22BE5171B00709032 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20BF4A252BE518FA00F772A6 /* PersonRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRowView.swift; sourceTree = "<group>"; };
+		20BF4A272BE51A9500F772A6 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		20BF4A292BE51FC800F772A6 /* NumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
+		20BF4A2B2BE5290700F772A6 /* ContactDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsView.swift; sourceTree = "<group>"; };
 		20C04FAF2BE5168200709032 /* ContactListSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactListSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C04FB22BE5168200709032 /* ContactListSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListSwiftUIApp.swift; sourceTree = "<group>"; };
 		20C04FB42BE5168200709032 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20C04FB62BE5168300709032 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20C04FB92BE5168300709032 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		20C04FC02BE516A400709032 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		20C04FC22BE5171B00709032 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20BF4A242BE5188400F772A6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				20C04FC02BE516A400709032 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		20C04FA62BE5168200709032 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +73,12 @@
 			children = (
 				20C04FB22BE5168200709032 /* ContactListSwiftUIApp.swift */,
 				20C04FB42BE5168200709032 /* ContentView.swift */,
+				20BF4A252BE518FA00F772A6 /* PersonRowView.swift */,
+				20BF4A2B2BE5290700F772A6 /* ContactDetailsView.swift */,
+				20BF4A272BE51A9500F772A6 /* ContactsView.swift */,
+				20BF4A292BE51FC800F772A6 /* NumbersView.swift */,
+				20BF4A242BE5188400F772A6 /* Services */,
+				20C04FC42BE5175600709032 /* Models */,
 				20C04FB62BE5168300709032 /* Assets.xcassets */,
 				20C04FB82BE5168300709032 /* Preview Content */,
 			);
@@ -65,6 +91,14 @@
 				20C04FB92BE5168300709032 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		20C04FC42BE5175600709032 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20C04FC22BE5171B00709032 /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BF4A2C2BE5290700F772A6 /* ContactDetailsView.swift in Sources */,
 				20C04FB52BE5168200709032 /* ContentView.swift in Sources */,
+				20C04FC12BE516A400709032 /* DataStore.swift in Sources */,
+				20C04FC32BE5171B00709032 /* Person.swift in Sources */,
+				20BF4A282BE51A9500F772A6 /* ContactsView.swift in Sources */,
+				20BF4A2A2BE51FC800F772A6 /* NumbersView.swift in Sources */,
+				20BF4A262BE518FA00F772A6 /* PersonRowView.swift in Sources */,
 				20C04FB32BE5168200709032 /* ContactListSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,8 +317,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,9 +326,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = KobelevaDaria.ContactListSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,8 +349,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,9 +358,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = KobelevaDaria.ContactListSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
